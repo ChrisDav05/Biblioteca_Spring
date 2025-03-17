@@ -112,11 +112,5 @@ public class Livro {
     public void setEmprestado(Boolean emprestado) {
         this.emprestado = emprestado;
     }
-
-    public Emprestimo getLivro() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLivro'");
-    }
-
     
 }

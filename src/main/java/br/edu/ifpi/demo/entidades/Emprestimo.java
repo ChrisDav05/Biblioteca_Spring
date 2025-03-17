@@ -34,21 +34,19 @@ public class Emprestimo {
 
     }
 
-    public Emprestimo(Long id, Livro livro, Usuario usuario, LocalDate dataEmprestimo,
-            LocalDate dataDevolucao, String status) {
-        this.id = id;
+    public Emprestimo(Livro livro, Usuario usuario) {
         this.livro = livro;
         this.usuario = usuario;
-        this.dataEmprestimo = dataEmprestimo;
-        this.dataDevolucao = dataDevolucao;
-        this.status = status;
+        this.dataEmprestimo = LocalDate.now();
+        this.dataDevolucao = dataEmprestimo.plusDays(7);
+        this.status = "emprestado";
     }
 
     public Emprestimo(EmprestimoDto emprestimoDto){
-        this.livro = emprestimoDto.livro();
-        this.usuario = emprestimoDto.usuario();
+        this.dataEmprestimo = emprestimoDto.dataEmprestimo();
+        this.dataDevolucao = emprestimoDto.dataDevolucao();
     }
-
+    
     public Long getId() {
         return id;
     }
