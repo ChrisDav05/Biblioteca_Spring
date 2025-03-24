@@ -31,7 +31,7 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<Usuario> adicionarUsuario (@RequestBody @Valid UsuarioDto dados) {
         Usuario usuarioCriado = new Usuario(dados);
-
+        
         this.usuariorepository.save(usuarioCriado);
 
         return ResponseEntity.ok(usuarioCriado);
