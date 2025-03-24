@@ -32,10 +32,11 @@ Este projeto é um sistema de gerenciamento de empréstimos de livros, desenvolv
     spring.mail.username=seu_email
     spring.mail.password=sua_senha
     ```
-3. Execute o projeto:
+3. Execute o projeto com o comando:
     ```bash
     ./mvnw spring-boot:run
     ```
+Obs.: Pode-se usar a interface da IDE para compilar e executar o código.
 
 ## Endpoints Principais
 - **/usuarios**: Gerenciamento de usuários
